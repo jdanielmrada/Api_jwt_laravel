@@ -30,4 +30,8 @@ Route::group([
     Route::post('refresh', 'App\Http\Controllers\AuthController@refresh');
     Route::post('me', 'App\Http\Controllers\AuthController@me');
     Route::post('register', 'App\Http\Controllers\AuthController@register');
+    Route::get('articles', 'App\Http\Controllers\ArticleController@index');
+    Route::post('articles', 'App\Http\Controllers\ArticleController@store');
+    Route::put('articles/{id}', 'App\Http\Controllers\ArticleController@update');
+    Route::delete('articles/{id}', 'App\Http\Controllers\ArticleController@destroy');
 });
